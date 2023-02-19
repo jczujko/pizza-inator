@@ -10,7 +10,11 @@ const FilteredPizzaMenu: React.FC = (): JSX.Element => {
 
   return (<div className='filtered-pizza-menu'>
     <MenuContext.Provider value={filteredPizzaList}>
-      <FilteredPizzaList pizzasToFilter={filteredPizzaList.pizzas} priceTag={filteredPizzaList.priceTag}/>
+      <FilteredPizzaList
+        pizzasToFilter={filteredPizzaList.pizzas}
+        priceTag={filteredPizzaList.priceTag}
+        sizes={filteredPizzaList.sizes}
+      />
     </MenuContext.Provider>
 
   </div>)
