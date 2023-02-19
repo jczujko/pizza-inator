@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/pizza-inator/static/css/main.31d6cfe0.css",
+    "main.js": "/pizza-inator/static/js/main.f6352fa9.js",
+    "index.html": "/pizza-inator/index.html",
+    "main.f6352fa9.js.map": "/pizza-inator/static/js/main.f6352fa9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.f6352fa9.js"
+  ]
+}
