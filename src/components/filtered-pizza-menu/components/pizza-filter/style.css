@@ -1,0 +1,37 @@
+.pizza-filter {
+    display: grid;
+    grid-template: 
+        "a a" minmax(20%,50%)
+        "b c" minmax(20%,40%);
+    grid-gap: 5px;
+    max-height: 90vh;
+    position: sticky;
+    top: 10px;
+}
+
+.pizza-filter__ingredients {
+    grid-area: a;
+ 
+}
+
+.pizza-filter__blacklist {
+    grid-area: b;
+}
+
+.pizza-filter__whitelist {
+    grid-area: c;
+}
+
+.draggable-ingredient {
+    margin: 5px;
+    padding: 1px;
+    border: 1px solid blue;
+    border-radius: 7px;
+    outline: 3px;
+}
+
+.draggable-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+

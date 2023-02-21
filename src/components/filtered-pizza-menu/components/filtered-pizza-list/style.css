@@ -1,0 +1,28 @@
+.filtered-pizza-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.pizza-header {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.pizza-header > span:not(:first-child){
+    display: flex;
+    justify-content: center;
+}
+
+.pizza {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.pizza-prices {
+    display: grid;
+}
+
+.pizza-prices > span {
+    display: flex;
+    justify-content: center;
+}
