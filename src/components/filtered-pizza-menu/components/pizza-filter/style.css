@@ -11,15 +11,23 @@
 
 .pizza-filter__ingredients {
     grid-area: a;
- 
+    display: grid;
+    grid-template-rows: 15% 85%;
+    position: relative;
 }
 
 .pizza-filter__blacklist {
     grid-area: b;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    position: relative;
 }
 
 .pizza-filter__whitelist {
     grid-area: c;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    position: relative;
 }
 
 .draggable-ingredient {
@@ -28,10 +36,51 @@
     border: 1px solid blue;
     border-radius: 7px;
     outline: 3px;
+    position: relative;
+    background-color: white;
+    z-index: 3;
+    cursor:grab;
 }
 
-.draggable-container {
+.draggable-ingredients {
     display: flex;
     flex-wrap: wrap;
+    z-index: 2;
+    align-items: flex-start;
+    justify-self: stretch;
+    position: relative;
 }
+
+.draggable-blacklist {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    align-items: flex-start;
+    justify-self: stretch;
+    position: relative;
+}
+
+.draggable-whitelist {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    align-items: flex-start;
+    justify-self: stretch;
+    position: relative;
+}
+
+.drop-here-card {
+    background-color: black;
+    position: absolute;
+    height: auto;
+    display: flex;
+    z-index: 5;
+    justify-self: stretch;
+}
+
+.draggable-ingredient--dragging {
+    z-index: 6;
+    cursor: grabbing;
+}
+
 

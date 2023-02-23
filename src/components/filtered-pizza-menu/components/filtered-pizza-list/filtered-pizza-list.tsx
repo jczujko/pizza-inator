@@ -7,7 +7,7 @@ const FilteredPizzaList: React.FC = (
 
 ): JSX.Element => {
   const filteredPizzaList = useContext<PizzaListContext>(MenuContext as React.Context<PizzaListContext>)
-  const pizzaPricesTemplateColumns = filteredPizzaList.sizes.map((size: string) => '100px').join(' ')
+  const pizzaPricesTemplateColumns = filteredPizzaList.sizes.map(() => '100px').join(' ')
   const pizzaTemplateColumns = `${100 * filteredPizzaList.sizes.length}px`
 
   return (
