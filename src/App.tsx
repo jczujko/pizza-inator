@@ -69,7 +69,7 @@ const App: React.FC = (): JSX.Element => {
         setBlacklist([...blacklist, ingredient])
         break
       case 'whitelist':
-        setWhitelist([...blacklist, ingredient])
+        setWhitelist([...whitelist, ingredient])
         break
     }
   }
