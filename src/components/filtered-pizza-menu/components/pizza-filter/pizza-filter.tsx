@@ -7,8 +7,6 @@ import Draggable, { type DraggableData, type DraggableEvent } from 'react-dragga
 const PizzaFilter: React.FC = (): JSX.Element => {
   const filteredPizzaList = useContext<PizzaListContext>(MenuContext as React.Context<PizzaListContext>)
 
-  const onDragStart = (e: DraggableEvent, data: DraggableData) => {}
-
   const onDragStop = (name: string) => (e: DraggableEvent, data: DraggableData): void => {
     if (data.node === null) {
       return
@@ -32,7 +30,7 @@ const PizzaFilter: React.FC = (): JSX.Element => {
         nodeRef={nodeRef}
         key={`ingredient-${key}`}
         onStop={onDragStop(name)}
-        onStart={onDragStart}
+        onStart={(): void => {}}
         bounds='.pizza-filter'
         defaultClassNameDragged=''
         defaultClassName='draggable-ingredient'
@@ -62,8 +60,6 @@ const PizzaFilter: React.FC = (): JSX.Element => {
     <div className='pizza-filter'>
       <div className='pizza-filter__ingredients'>
         <h3>Ingredients</h3>
-        <div className='drop-here-card'>
-        </div>
         <IngredientList
           ingredients={filteredPizzaList.ingredients}
           className='draggable-ingredients'

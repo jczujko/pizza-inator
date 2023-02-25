@@ -39,6 +39,29 @@ const App: React.FC = (): JSX.Element => {
     setPizzas(pizzasToChange)
   }
 
+  const filterMenu = (): void => {
+    if (pizzas === undefined) {
+      return
+    }
+    const pizzasToFilter =
+    pizzas.map((pizza: FilteredPizza) => {
+      const whitelisted = pizza.ingredients.some((ingredient: string) => whitelist.includes(ingredient))
+      const blacklisted = pizza.ingredients.some((ingredient: string) => blacklist.includes(ingredient))
+      const hidePizza = whitelist.length > 0 ? !whitelisted || blacklisted : blacklisted
+      return {
+        name: pizza.name,
+        ingredients: pizza.ingredients,
+        prices: pizza.prices,
+        isHidden: hidePizza
+      }
+    })
+    setPizzas(pizzasToFilter)
+  }
+
+  useEffect((): void => {
+    filterMenu()
+  }, [blacklist, whitelist])
+
   const moveIngredient = (ingredient: string, from: IngredientContainer, to: IngredientContainer): void => {
     let newFrom, index
     switch (from) {
