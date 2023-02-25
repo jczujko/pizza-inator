@@ -1,3 +1,29 @@
 body {
-    margin: 0px 20px 0px 20px
+    margin: 0px 20px 0px 20px;
+    min-height: 100vh;
+}
+
+.pizza-inator {
+    min-height: 100vh;
+}
+
+.pizza-inator__header {
+    min-height: 20vh;
+}
+
+.pizza-inator__content {
+    min-height: 80vh;
+}
+
+h1{
+    font-size: 3em;
+    margin: 0
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.2em;
 }

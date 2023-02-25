@@ -1,10 +1,10 @@
 .pizza-filter {
     display: grid;
     grid-template: 
-        "a a" minmax(20%,50%)
-        "b c" minmax(20%,40%);
+        "a a" auto
+        "b c" 50%;
     grid-gap: 5px;
-    max-height: 90vh;
+    max-height: 80vh;
     position: sticky;
     top: 10px;
 }
@@ -49,6 +49,8 @@
     align-items: flex-start;
     justify-self: stretch;
     position: relative;
+    justify-content: start;
+    align-content: start;
 }
 
 .draggable-blacklist {
@@ -58,6 +60,8 @@
     align-items: flex-start;
     justify-self: stretch;
     position: relative;
+    justify-content: start;
+    align-content: start;
 }
 
 .draggable-whitelist {
@@ -67,20 +71,43 @@
     align-items: flex-start;
     justify-self: stretch;
     position: relative;
-}
-
-.drop-here-card {
-    background-color: black;
-    position: absolute;
-    height: auto;
-    display: flex;
-    z-index: 5;
-    justify-self: stretch;
+    justify-content: start;
+    align-content: start;
 }
 
 .draggable-ingredient--dragging {
-    z-index: 6;
+    z-index: 9999;
     cursor: grabbing;
+    visibility: visible;
 }
 
-
+.drop-ingredients {
+    display: none;
+    justify-self: stretch;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.drop-blacklist {
+    display: none;
+    justify-self: stretch;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.drop-whitelist {
+    display: none;
+    justify-self: stretch;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 5px;
+}

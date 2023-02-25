@@ -1,0 +1,31 @@
+
+.json-uploader__input {
+    margin: 20px 20px 50px 20px;
+}
+
+.json-uploader__buttons {
+    margin:0px 20px 0px 20px;
+}
+
+.json-uploader__help {
+    margin:0px 20px 0px 20px;
+}
+
+.json-uploader__buttons > button {
+    margin-right: 30px;
+}
+
+.json-uploader__input-help {
+    display: inline-block;
+    border: 1px solid black;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    text-justify: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.json-uploader__help--hidden {
+    display: none;
+}

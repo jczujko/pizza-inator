@@ -2,6 +2,8 @@ import React, { useState, type ChangeEvent } from 'react'
 import { type PizzaMenu } from '../../utils/types'
 import { pecorino } from '../../utils/pecorino'
 import { pizzaMenuValidator } from '../../helpers/pizzaMenuValidator'
+import './style.css'
+import { example } from './example'
 
 interface Props {
   onSave: (menu: PizzaMenu) => void
@@ -10,6 +12,7 @@ interface Props {
 const JsonUploader: React.FC<Props> = ({ onSave }: Props): JSX.Element => {
   const [menuJson, setMenuJson] = useState<PizzaMenu | undefined>(undefined)
   const submitDisabled: boolean = menuJson === undefined
+  const [isHelpHidden, setIsHelpHidden] = useState<boolean>(true)
 
   const handleJsonUpload = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.files === null) {
@@ -32,12 +35,28 @@ const JsonUploader: React.FC<Props> = ({ onSave }: Props): JSX.Element => {
     }
   }
 
+  const toggleHelpVisibility = (): void => { setIsHelpHidden(!isHelpHidden) }
+
   return (
-    <>
-      <input type="file" accept=".json" onChange={handleJsonUpload} />
-      <button onClick={() => { onSave(menuJson as PizzaMenu) }} disabled={submitDisabled}>Submit</button>
-      <button onClick={() => { onSave(pecorino) }}>Load default</button>
-    </>
+    <div className='json-uploader'>
+      <div className={!isHelpHidden ? 'json-uploader__help' : 'json-uploader__help--hidden'}>
+        <pre>
+          <code>
+            Example acceptable JSON:<br/>
+            {example}
+
+          </code>
+        </pre>
+      </div>
+      <div className='json-uploader__input'>
+        <input type="file" accept=".json" onChange={handleJsonUpload} />
+        <div className='json-uploader__input-help' onClick={toggleHelpVisibility}>?</div>
+      </div>
+      <div className='json-uploader__buttons'>
+        <button onClick={() => { onSave(menuJson as PizzaMenu) }} disabled={submitDisabled}>Submit</button>
+        <button onClick={() => { onSave(pecorino) }}>Load default</button>
+      </div>
+    </div>
   )
 }
 

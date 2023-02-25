@@ -6,6 +6,7 @@
 .pizza-header {
     display: grid;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .pizza-header > span:not(:first-child){
