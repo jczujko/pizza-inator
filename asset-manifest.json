@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pizza-inator/static/css/main.3f03d476.css",
-    "main.js": "/pizza-inator/static/js/main.744ca075.js",
+    "main.css": "/pizza-inator/static/css/main.39434182.css",
+    "main.js": "/pizza-inator/static/js/main.63dff335.js",
     "index.html": "/pizza-inator/index.html",
-    "main.3f03d476.css.map": "/pizza-inator/static/css/main.3f03d476.css.map",
-    "main.744ca075.js.map": "/pizza-inator/static/js/main.744ca075.js.map"
+    "main.39434182.css.map": "/pizza-inator/static/css/main.39434182.css.map",
+    "main.63dff335.js.map": "/pizza-inator/static/js/main.63dff335.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f03d476.css",
-    "static/js/main.744ca075.js"
+    "static/css/main.39434182.css",
+    "static/js/main.63dff335.js"
   ]
 }
