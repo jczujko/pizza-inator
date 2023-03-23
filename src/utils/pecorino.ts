@@ -153,6 +153,48 @@ export const pecorino: PizzaMenu = {
       name: 'Siciliana',
       ingredients: ['sos pomidorowy', 'ser mozzarella', 'krewetki koktajlowe', 'tuńczyk', 'omułki', 'karczoch'],
       prices: [29.9, 38.5, 67.5]
+    },
+    {
+      name: 'Broccoli',
+      ingredients: ['sos śmietanowo-serowy', 'ser mozzarella', 'szynka', 'brokuły', 'ser gorgonzola'],
+      prices: [28.9, 34.5, 60.9]
+    },
+    {
+      name: 'Curry',
+      ingredients: ['sos śmietanowo-serowy', 'ser mozzarella', 'kurczak curry', 'brokuły', 'świeżo mielony pieprz'
+
+      ],
+      prices: [27.9, 32.9, 59.9]
+    },
+    {
+      name: '4 Fromaggi',
+      ingredients: ['sos śmietanowo-serowy', 'ser mozzarella', 'gorgonzola', 'camembert', 'ser Grana Padano'],
+      prices: [29.5, 40.9, 67.5]
+    },
+    {
+      name: 'Pecorino rosso',
+      ingredients: ['sos pomidorowy', 'ser mozzarella', 'kapary', 'suszone pomidory', 'szynka dojrzewająca', 'rukola', 'ser Pecorino', 'oliwa czosnkowa'],
+      prices: [31.9, 40.9, 69.9]
+    },
+    {
+      name: 'Pecorino bianco',
+      ingredients: ['sos śmietanowo-serowy', 'ser mozzarella', 'kapary', 'suszone pomidory', 'szynka dojrzewająca', 'rukola', 'ser Pecorino', 'oliwa czosnkowa'],
+      prices: [31.9, 40.9, 69.9]
+    },
+    {
+      name: 'Pera',
+      ingredients: ['sos pomidorowy', 'ser mozzarella', 'gruszka', 'ser gorgonzola', 'szynka dojrzewająca', 'orzechy'],
+      prices: [30.5, 39.5, 67.9]
+    },
+    {
+      name: 'Viva la funghi',
+      ingredients: ['sos śmietanowo-serowy', 'ser mozzarella', 'kurki', 'podgrzybki', 'pieczarki', 'cebula', 'ser gorgonzola'],
+      prices: [29.9, 38.9, 67.5]
+    },
+    {
+      name: 'Truflowa',
+      ingredients: ['salsa truflowa', 'mozzarella z zalewy', 'pikantne salami', 'ser ricotta', 'ser Grana Padano'],
+      prices: [31.9, 40.5, 69.5]
     }
   ]
 }
